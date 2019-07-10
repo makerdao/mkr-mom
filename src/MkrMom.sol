@@ -27,7 +27,7 @@ contract MkrMom is DSNote {
     mkr.mint(usr, wad);
   }
 
-  function burn(address usr, uint wad) public auth {
+  function burn(address usr, uint wad) public {
     mkr.burn(usr, wad);
   }
 }
