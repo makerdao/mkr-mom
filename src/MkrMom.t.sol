@@ -8,7 +8,7 @@ contract MkrMomTest is DSTest {
     MkrMom mom;
 
     function setUp() public {
-        mom = new MkrMom();
+        mom = new MkrMom(new DSToken("FKR"));
     }
 
     function testFail_basic_sanity() public {

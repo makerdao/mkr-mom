@@ -3,7 +3,7 @@ pragma solidity ^0.5.10;
 import "ds-note/note.sol";
 import "ds-token/token.sol";
 
-contract MkrMom {
+contract MkrMom is DSNote {
   address owner;
   modifier onlyOwner { require(msg.sender == owner); _;}
 
