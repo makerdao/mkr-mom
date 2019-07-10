@@ -4,7 +4,7 @@ import "ds-note/note.sol";
 import "ds-token/token.sol";
 
 contract MkrMom is DSNote {
-  address owner;
+  address public owner;
   modifier onlyOwner { require(msg.sender == owner); _;}
 
   mapping (address => uint) public wards;

@@ -5,17 +5,16 @@ import "ds-test/test.sol";
 import "./MkrMom.sol";
 
 contract MkrMomTest is DSTest {
+    DSToken fkr;
     MkrMom mom;
 
     function setUp() public {
-        mom = new MkrMom(new DSToken("FKR"));
+        fkr = new DSToken("FKR");
+        mom = new MkrMom(fkr);
     }
 
-    function testFail_basic_sanity() public {
-        assertTrue(false);
-    }
-
-    function test_basic_sanity() public {
-        assertTrue(true);
+    function verifyConstruction() public {
+      assertTrue(mom.owner() == address(this));
+      assertTrue(mom.mkr() == fkr);
     }
 }
