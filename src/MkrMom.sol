@@ -1,7 +1,7 @@
 pragma solidity ^0.5.10;
 
-import "ds-note/note.sol"
-import "ds-token/token.sol"
+import "ds-note/note.sol";
+import "ds-token/token.sol";
 
 contract MkrMom {
   address owner;
